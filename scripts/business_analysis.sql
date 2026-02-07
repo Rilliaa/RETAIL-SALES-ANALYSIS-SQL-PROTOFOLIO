@@ -1,4 +1,4 @@
--- Query Number 4 : Calculate the percentage contribution of each product category to the total net revenue, excluding returned items.
+-- Query Number 1 : Calculate the percentage contribution of each product category to the total net revenue, excluding returned items.
 with category_rev as (
 select 
 	pd.category,
@@ -17,18 +17,7 @@ order by percentage desc
 
 ----------------------------------
 
--- Query Number 6 : Categorize transactions into 'No Discount' and 'Discounted' based on the discount applied, and calculate the total net revenue for each category.
--- select 
--- 	case 
--- 		when discount = 0 then 'No Discount' 
--- 		when discount > 0 then 'Discounted' 
--- 		else 'Invalid'
--- 	end as category_transaction, 
--- 	sum(pd.list_price * sd.quantity * (1-sd.discount)) as net_rev 
--- from sales_data sd  
--- join product_data pd on sd.product_id = pd.product_id 
--- group by category_transaction
-
+-- Query Number 2 : Categorize transactions into 'No Discount' and 'Discounted' based on the discount applied, and calculate the total net revenue for each category.
 select 
 	sd.discount, 
 	count(*) as total_transaction,
@@ -40,7 +29,7 @@ group by sd.discount
 
 ----------------------------------
 
---  Query Number 9 : Segment customers into 'High Value', 'Medium Value', and 'Low Value' based on their total revenue contribution.
+--  Query Number 3 : Segment customers into 'High Value', 'Medium Value', and 'Low Value' based on their total revenue contribution.
 with rev_tab as 
 ( 
 	select 
@@ -67,11 +56,9 @@ select
     count(*) over(PARTITION BY segementation) as total_customers
 from segment
 
-
-
 ----------------------------------
 
--- Query Number 10 : Determine the percentage of customers who have made repeat purchases.
+-- Query Number 4 : Determine the percentage of customers who have made repeat purchases.
 with customer_counts as 
 (
 	select 
@@ -93,7 +80,7 @@ select
 from summary_stats
 
 ----------------------------------
--- query number 11 : monthly revenue growth percentage comparison
+-- query number 5 : monthly revenue growth percentage comparison
 select 
 	month, 
 	rev as revenue_now, 
@@ -108,4 +95,5 @@ from
 	join product_data pd on sd.product_id = pd.product_id
 	group by month 
 	order by month 
+
 ) as growth
