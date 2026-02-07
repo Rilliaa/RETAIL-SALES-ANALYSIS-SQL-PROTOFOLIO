@@ -17,7 +17,7 @@ Tujuan utama dari proyek ini adalah mengubah data retail yang "berantakan" menja
 ---
 
 ## 📂 Repository Structure
-
+```text
 ├── analysis_result/         # Visualisasi hasil query (.png)
 ├── dataset/
 │   └── README.md            # Informasi sumber & deskripsi dataset
@@ -25,7 +25,7 @@ Tujuan utama dari proyek ini adalah mengubah data retail yang "berantakan" menja
 │   ├── cleaning_queries.sql # Pembersihan data & penanganan anomali
 │   └── business_analysis.sql# Query inti untuk insights bisnis
 └── README.md                # Dokumentasi utama (Anda berada di sini)
-
+```
 
 ---
 
