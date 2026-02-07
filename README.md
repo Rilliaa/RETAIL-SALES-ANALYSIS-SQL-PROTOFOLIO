@@ -1,5 +1,109 @@
+# 🇬🇧 EN
+
+## Retail Sales Analysis: Revenue, Growth, Customer & Discount Insights (SQL)
+
+## 📌 Project Overview
+
+This project aims to analyze the business performance of a fashion retail company using **PostgreSQL**. The analysis focuses on *data cleaning*, anomaly detection, customer segmentation, and the extraction of strategic insights to support revenue growth.
+
+The primary objective is to transform “messy” retail data into clear, **actionable business recommendations**.
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+* **Database:** PostgreSQL
+* **SQL Editor:** Visual Studio Code
+* **Dataset:** [Kaggle Retail Fashion Dataset](https://www.kaggle.com/datasets/vanpatangan/retail-fashion-data)
+* **Documentation:** Canva (Presentation)
+
+---
+
+## 📂 Repository Structure
+
+```text
+├── analysis_result/          # Query result visualizations (.png)
+├── dataset/
+│   └── README.md             # Dataset source & description
+├── scripts/
+│   ├── cleaning_queries.sql  # Data cleaning & anomaly handling
+│   └── business_analysis.sql # Core queries for business insights
+└── README.md                 # Main documentation (you are here)
+```
+
+---
+
+## 🧹 Data Integrity & Cleaning (The “Quality-First” Approach)
+
+Before proceeding to analysis, a lightweight *data engineering* process was conducted to ensure data integrity. This step is critical, as the raw dataset contains anomalies that could potentially distort business decisions.
+
+**Key steps performed:**
+
+* **Anomaly Removal:** Identification and handling of *ghost customers* (ID: `S999`) and invalid products (ID: `P999999`).
+* **Flagging System:** Implementation of a valid-data filtering mechanism to ensure only legitimate transactions are analyzed.
+* **Missing Value Handling:** Imputation for discount-related fields and categorization of undefined values as `"Unknown"`.
+
+*Detailed cleaning queries can be found in [`scripts/cleaning_queries.sql`](scripts/cleaning_queries.sql).*
+
+---
+
+## 📊 Key Insights
+
+### 1. Revenue Contribution by Category
+
+* Revenue is evenly distributed (≈19–20%) across all major product categories.
+* The presence of an `"Unknown"` category highlights an opportunity to improve product classification systems.
+
+### 2. Discount Level & Purchase Behavior
+
+* **63% of transactions** occurred without any discount.
+* Indicates strong intrinsic product appeal, with limited dependency on price reductions.
+
+### 3. Customer Segmentation
+
+* The customer base is dominated by the **Medium Value** segment.
+* Significant opportunity exists for *upselling* strategies to convert these customers into *High Value Customers*.
+
+### 4. Retention & Repeat Purchases
+
+* A relatively strong retention rate of **66.8%**.
+* Future efforts should focus on converting the remaining one-third of customers who are still *one-time buyers*.
+
+### 5. Revenue Trend & Growth
+
+* Revenue growth is non-linear but exhibits clear seasonal patterns.
+* Performance spikes are observed in **March, May, July, and October**.
+
+---
+
+## 💡 Strategic Recommendations
+
+1. **“Upgrade Program”**
+   Target *Medium Value* customers with loyalty incentives or personalized product bundles to increase *Customer Lifetime Value (CLV)*.
+
+2. **Seasonal Playbook**
+   Analyze the success drivers behind peak months (Mar, May, Jul, Oct) and replicate these promotional strategies during lower-performing periods.
+
+---
+
+## 🚀 Conclusion
+
+This analysis demonstrates the ability to:
+
+* Convert raw transactional data into clear and meaningful **business insights**.
+* Apply advanced SQL analytics techniques (Joins, CTEs, Aggregations).
+* Deliver structured **data storytelling**, from problem identification to strategic recommendations.
+
+---
+
+**Contact Information**
+**Rio Liando Anggeri**
+LinkedIn: [https://www.linkedin.com/in/rio-liando-748870249/](https://www.linkedin.com/in/rio-liando-748870249/)
+Email: [rioliandoa@gmail.com](mailto:rioliandoa@gmail.com)
+
+---
 # 🇮🇩 ID 
-# Retail Sales Analysis: Revenue, Growth, Customer & Discount Insights (SQL)
+## Retail Sales Analysis: Revenue, Growth, Customer & Discount Insights (SQL)
 
 ## 📌 Project Overview
 Proyek ini bertujuan untuk menganalisis performa bisnis retail fashion menggunakan **PostgreSQL**. Analisis difokuskan pada pembersihan data (*data cleaning*), identifikasi anomali, segmentasi pelanggan, dan ekstraksi *insight* strategis untuk mendorong pertumbuhan *revenue*.
